@@ -58,6 +58,7 @@ bindkey '^n' history-search-forward
 alias ls='ls --color'
 alias vim='nvim'
 alias c='clear'
+alias cat='bat'
 alias claude="/Users/dhruvsaxena/.claude/local/claude"
 alias serena-index="uvx --from git+https://github.com/oraios/serena serena project index"
 alias claude-add-serena="claude mcp add serena -- uvx --from git+https://github.com/oraios/serena serena-mcp-server --context ide-assistant --project $(pwd)"
