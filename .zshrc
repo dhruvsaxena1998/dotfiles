@@ -1,5 +1,3 @@
-# Install oh-my-zsh -> sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.oh-my-zsh/custom"
 
@@ -41,8 +39,9 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 
 # Shell integration
-eval "$(zoxide init --cmd cd zsh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(starship init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Google Cloud SDK (gcloud + kubectl) setup via Homebrew
 if [ -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" ]; then
