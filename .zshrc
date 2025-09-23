@@ -49,6 +49,9 @@ if [ -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" ]; then
   source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
 
+# Custom Plugins
+source $ZSH_CUSTOM/alias.plugin.zsh
+
 # Key bindings
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
